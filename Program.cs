@@ -75,8 +75,16 @@ namespace ConsoleApplication1
             
         }
 
+        public static ExprC parse(string[] arr){
+            if(arr.Length == 1){
+                double n;
+                if(double.TryParse(arr[0], out n)){
+                    return new numC(n);
+                }
+            }
 
-
+            return new numC(3);
+        }
         
 
         static void Main(string[] args)
@@ -85,6 +93,9 @@ namespace ConsoleApplication1
             Console.WriteLine(interp(anum).toString());
             
             Console.WriteLine("hello world");
+
+            string[] aNum = {"3.2"};
+            Console.WriteLine(interp(parse(aNum)).toString());
         }
     }
 }
