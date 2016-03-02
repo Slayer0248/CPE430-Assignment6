@@ -25,6 +25,9 @@ class LangException : Exception
 
 class OWWQ3Runner
 {
+
+   public int lookup
+
    public double numBinopHandle(String op, double num1, double num2) {
       if (op.Equals("+", StringComparison.Ordinal)) {
          return num1 + num2;
@@ -101,6 +104,12 @@ class OWWQ3Runner
       else {
          LangException ex = new LangException("Bad boolean binop");
          throw ex;
+      }
+   }
+   
+   public ExprC parse(string[] prog) {
+      if (prog.length > 1) {
+      
       }
    }
 
