@@ -229,12 +229,8 @@ namespace ConsoleApplication1
          if (prim1Type.Equals(typeof(double)) && prim2Type.Equals(typeof(double))) {
             double num1 = (double)prim1;
             double num2 = (double)prim2;
-            if (num1 <= num2) { 
-               return true;
-            }
-            else {
-               return false;
-            }
+            
+            return num1 <= num2;
          }
          else {
             LangException ex = new LangException("Both types for <= must be doubles");
@@ -249,23 +245,13 @@ namespace ConsoleApplication1
             double num1 = (double)prim1;
             double num2 = (double)prim2;
             
-            if (num1 == num2) {
-               return true;
-            }
-            else {
-               return false;
-            }
+            return num1 == num2;
          }
          else {
             bool bool1 = (bool)prim1;
             bool bool2 = (bool)prim2;
             
-            if (bool1 == bool2) {
-               return true;
-            }
-            else {
-               return false;
-            }
+            return bool1 == bool2;
          }
          
       }
